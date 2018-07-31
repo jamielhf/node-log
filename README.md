@@ -32,3 +32,8 @@ $ npm start
 - Node.js 8.x
 - Typescript 2.8+
 
+### todo
+
+[ ] 登陆功能
+[ ] 注册功能
+[ ] 前端先用react构建好
