@@ -9,7 +9,11 @@ export interface BizConfig {
 }
 
 export default (appInfo: EggAppInfo) => {
-  const config = {} as PowerPartial<EggAppConfig> & BizConfig;
+  const config = {
+    view: {
+      defaultViewEngine: 'nunjucks',
+    },
+  } as PowerPartial<EggAppConfig> & BizConfig;
 
   // app special config
   config.sourceUrl = `https://github.com/eggjs/examples/tree/master/${appInfo.name}`;
