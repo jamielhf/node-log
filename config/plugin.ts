@@ -1,10 +1,10 @@
 import { EggPlugin } from 'egg';
 
 const plugin: EggPlugin = {
-  static: true,
-  nunjucks: {
+  // static: true,
+  assets: {
     enable: true,
-    package: 'egg-view-nunjucks',
+    package: 'egg-view-assets',
   },
 };
 

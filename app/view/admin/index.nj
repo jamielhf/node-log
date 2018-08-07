@@ -1,6 +1,0 @@
-{% include "./header.nj" %}
-
-123
-
-
-{% include "./footer.nj" %}
