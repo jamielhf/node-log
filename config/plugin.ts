@@ -10,6 +10,10 @@ const plugin: EggPlugin = {
     enable: true,
     package: 'egg-passport',
   },
+  mongoose : {
+    enable: true,
+    package: 'egg-mongoose',
+  },
   passportGithub : {
     enable: true,
     package: 'egg-passport-github',

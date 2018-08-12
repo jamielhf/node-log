@@ -3,4 +3,5 @@
 
 import 'egg-view-assets';
 import 'egg-passport';
+import 'egg-mongoose';
 import 'egg-passport-github';

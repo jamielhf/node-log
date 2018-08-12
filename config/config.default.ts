@@ -37,7 +37,11 @@ export default (appInfo: EggAppInfo) => {
     // callbackURL: '/passport/github/callback',
     // proxy: false,
   };
-
+// 数据库配置
+  config.mongoose = {
+    url: 'mongodb://127.0.0.1/logDb',
+    options: {},
+  };
   config.assets = {
     publicPath: '/public/',
     devServer: {
