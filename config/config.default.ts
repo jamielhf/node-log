@@ -45,7 +45,7 @@ export default (appInfo: EggAppInfo) => {
   config.assets = {
     publicPath: '/public/',
     devServer: {
-      debug: false,
+      debug: true,
       command: 'roadhog dev',
       port: 8000,
       env: {

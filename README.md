@@ -37,3 +37,11 @@ $ npm start
 [ ] 登陆功能
 [ ] 注册功能
 [ ] 前端先用react构建好
+
+### bug记录
+
+```bash
+ERROR 11300 nodejs.ENOENTError: spawn roadhog ENOENT
+```
+
+全局安装loadhog后就没有这个问题，在当前的文件夹安装就跑不动
