@@ -3,8 +3,14 @@ export default (app) => {
   const Schema = mongoose.Schema;
 
   const userSchema = new Schema({
-    username: { type: String  },
-    password: { type: String  },
+    username: {
+      type: String,
+      required: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
     createTime: {
       type: Date,
       default: Date.now,
@@ -17,6 +23,8 @@ export default (app) => {
     },
     userId: {
       type: String,
+      required: true,
+      unique: true,
     },
   },
   { timestamps: true },

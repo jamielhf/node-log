@@ -8,10 +8,12 @@ function RouterConfig({ history }) {
     <Router history={history}>
       <Switch>
         <Route path="/" exact component={IndexPage} />
-        <Route path="/user" exact component={UserPage} />
+        <Route path="/user"  component={UserPage} />
       </Switch>
     </Router>
   );
 }
 
 export default RouterConfig;
+
+
