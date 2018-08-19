@@ -1,4 +1,4 @@
-import { Form, Input, Tooltip, Icon, Row, Col, Checkbox, Button, } from 'antd';
+import { Form, Input,Row, Col, Button, } from 'antd';
 import React, {Component} from 'react';
 import {Link} from 'dva/router';
 
@@ -64,9 +64,9 @@ class Register extends Component {
         >
           {getFieldDecorator('email', {
             rules: [{
-              type: 'email', message: 'The input is not valid E-mail!',
+              type: 'email', message: '请输入正确邮箱',
             }, {
-              required: true, message: 'Please input your E-mail!',
+              required: true, message: '请填写邮箱',
             }],
           })(
             <Input />
@@ -130,8 +130,6 @@ class Register extends Component {
           </Col>
         </Row>
 
-          
-          
         </FormItem>
       </Form>
       </Col>

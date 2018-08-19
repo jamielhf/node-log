@@ -2,28 +2,23 @@ export default (app) => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
 
-  const userSchema = new Schema({
-    username: {
+  const authorizationSchema = new Schema({
+    provider: {
       type: String,
-      required: true,
+      require: true,
     },
-    password: {
+    uid: {
       type: String,
-    },
-    email: {
-      type: String,
-    },
-    headUrl: {
-      type: String,
+      require: true,
+      unique: true,
     },
     userId: {
       type: String,
-      required: true,
+      require: true,
       unique: true,
     },
   },
   { timestamps: true },
 );
-
-  return mongoose.model('User', userSchema);
+  return mongoose.model('Authorization', authorizationSchema);
 };
