@@ -1,7 +1,6 @@
 import { Service } from 'egg';
 import crypto = require('crypto');
 
-
 /**
  * Test Service
  */
@@ -37,5 +36,11 @@ export default class Test extends Service {
     if (res && authRes) {
       return res;
     }
+  }
+  /**
+   * 是否登陆
+   */
+  public async checkLogin() {
+
   }
 }

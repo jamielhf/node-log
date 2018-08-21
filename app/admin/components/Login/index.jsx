@@ -15,40 +15,40 @@ class Login extends Component {
       }
     });
   }
+  loginForGithub = () => {
+
+  }
 
    render() {
     const { getFieldDecorator } = this.props.form;
      return (
-      <Row>
+      <Row className={style.login}>
           <Col span={8} offset={8}>
-      <Form onSubmit={this.handleSubmit} className={style.loginForm}>
+      <Form className={style.form} onSubmit={this.handleSubmit} >
         <FormItem>
           {getFieldDecorator('userName', {
-            rules: [{ required: true, message: 'Please input your username!' }],
+            rules: [{ required: true, message: '请输入用户名' }],
           })(
             <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
           )}
         </FormItem>
         <FormItem>
           {getFieldDecorator('password', {
-            rules: [{ required: true, message: 'Please input your Password!' }],
+            rules: [{ required: true, message: '请输入密码' }],
           })(
             <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
           )}
         </FormItem>
-        {/* <a className="login-form-forgot" href="">Forgot password</a> */}
         <Row >
-          <Col span={4} offset={4}>
-          <Button type="primary" htmlType="submit" className={style.loginFormButton}>
+          <Col >
+          <a className={style.loginFormButton}>
             登陆
-          </Button>
-          </Col>
-          
-          <Col span={4} offset={2}>
+          </a>
+          <a onClick={this.loginForGithub}>
+             github登陆
+          </a>
             <Link to="./reg">
-              <Button type="primary">
               去注册
-              </Button>
             </Link>
           </Col>
         </Row>
