@@ -23,7 +23,11 @@ export default (appInfo: EggAppInfo) => {
   config.keys = appInfo.name + '_1532529580752_5059';
 
   // add your config here
-  config.middleware = [];
+  config.middleware = ['errorHandler'];
+  // 只对 /api 前缀的 url 路径生效
+  config.errorHandler = {
+    match: '/api',
+  };
   config.view = {
     root: path.join(appInfo.baseDir, 'app/admin'),
     mapping: {
@@ -41,20 +45,6 @@ export default (appInfo: EggAppInfo) => {
   config.mongoose = {
     url: 'mongodb://127.0.0.1/logDb',
     options: {},
-  };
-  config.assets = {
-    publicPath: '/public/',
-    devServer: {
-      debug: true,
-      command: 'roadhog dev',
-      port: 8000,
-      env: {
-        BROWSER: 'none',
-        ESLINT: 'none',
-        SOCKET_SERVER: 'http://127.0.0.1:8000',
-        PUBLIC_PATH: 'http://127.0.0.1:8000',
-      },
-    },
   };
 
   return config;

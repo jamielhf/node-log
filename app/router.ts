@@ -5,4 +5,5 @@ export default (app) => {
     successRedirect: '/',
   });
   router.get('/', controller.admin.index);
+  router.get('/api/user/login', controller.user.login);
 };

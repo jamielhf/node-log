@@ -36,7 +36,7 @@ $ npm start
 
 [ ] 登陆功能
 [ ] 注册功能
-[ ] 前端先用react构建好
+[ ] 后台界面先用antd-pro构建 https://pro.ant.design/docs/getting-started-cn
 
 ### bug记录
 

@@ -40,7 +40,7 @@ export default class Test extends Service {
   /**
    * 是否登陆
    */
-  public async checkLogin() {
+  // public async checkLogin() {
 
-  }
+  // }
 }
