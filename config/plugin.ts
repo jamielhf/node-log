@@ -2,9 +2,13 @@ import { EggPlugin } from 'egg';
 
 const plugin: EggPlugin = {
   // static: true,
-  assets: {
+  // assets: {
+  //   enable: true,
+  //   package: 'egg-view-assets',
+  // },
+  cors : {
     enable: true,
-    package: 'egg-view-assets',
+    package: 'egg-cors',
   },
   passport : {
     enable: true,

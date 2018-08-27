@@ -1,9 +1,7 @@
 
 export default (app) => {
   const { controller, router } = app;
-  app.passport.mount('github', {
-    successRedirect: '/',
-  });
+  app.passport.mount('github');
   router.get('/', controller.admin.index);
-  router.get('/api/user/login', controller.user.login);
+  router.post('/api/user/login', controller.user.login);
 };

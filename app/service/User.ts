@@ -37,6 +37,11 @@ export default class Test extends Service {
       return res;
     }
   }
+  public async login({email, password}) {
+    const md5 = crypto.createHash('md5');
+    const p: string = md5.update(password).digest('hex');
+    return await this.ctx.model.User.findOne({email, password: p});
+  }
   /**
    * 是否登陆
    */

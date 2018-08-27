@@ -2,6 +2,7 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg-view-assets';
+import 'egg-cors';
 import 'egg-passport';
 import 'egg-mongoose';
 import 'egg-passport-github';

@@ -28,6 +28,18 @@ export default (appInfo: EggAppInfo) => {
   config.errorHandler = {
     match: '/api',
   };
+  config.security = {
+    csrf: false,
+    methodnoallow: {
+      enable: true,
+    },
+    domainWhiteList: [ 'http://localhost:8000' ],
+  };
+  // 跨域设置
+  config.cors = {
+    credentials: true,
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+  };
   config.view = {
     root: path.join(appInfo.baseDir, 'app/admin'),
     mapping: {
@@ -38,7 +50,7 @@ export default (appInfo: EggAppInfo) => {
   config.passportGithub = {
     key: '741e6d458f9c8f27fb6f',
     secret: 'c1465ac92cf1fef12a95f282b8de1d39dd4dfe8a',
-    // callbackURL: '/passport/github/callback',
+    callbackURL: 'http://127.0.0.1:8000/',
     // proxy: false,
   };
 // 数据库配置
@@ -46,6 +58,5 @@ export default (appInfo: EggAppInfo) => {
     url: 'mongodb://127.0.0.1/logDb',
     options: {},
   };
-
   return config;
 };
