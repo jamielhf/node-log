@@ -45,3 +45,10 @@ ERROR 11300 nodejs.ENOENTError: spawn roadhog ENOENT
 ```
 
 全局安装loadhog后就没有这个问题，在当前的文件夹安装就跑不动
+
+## mongodb启动
+
+```bath
+cd /usr/local/mongodb/bin/
+sudo ./mongod
+```
