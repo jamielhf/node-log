@@ -16,6 +16,9 @@ export default (app) => {
     headUrl: {
       type: String,
     },
+    type: {
+      type: String,
+    },
     userId: {
       type: String,
       required: true,

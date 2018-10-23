@@ -5,6 +5,7 @@ module.exports = (app) => {
     // 检查用户
     assert(user.provider, 'user.provider should exists');
     assert(user.id, 'user.id should exists');
+    ctx.logger.info('github返回的用户数据' , user);
     // 从数据库中查找用户信息
     //
     // Authorization Table
@@ -20,13 +21,13 @@ module.exports = (app) => {
     if (auth) {
       const existsUser = await ctx.model.User.findOne({ userId: auth.userId });
       if (existsUser) {
-        ctx.logger.debug('已经存在用户信息' , existsUser);
+        ctx.logger.info('已经存在用户信息' , existsUser);
         return existsUser;
       }
     }
 
     // 调用 service 注册新用户
-    const newUser = await ctx.service.user.register(user);
+    const newUser = await ctx.service.login.register(user);
     return newUser;
   });
 

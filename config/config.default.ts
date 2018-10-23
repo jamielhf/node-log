@@ -33,7 +33,7 @@ export default (appInfo: EggAppInfo) => {
     methodnoallow: {
       enable: true,
     },
-    domainWhiteList: [ 'http://localhost:8000' ],
+    domainWhiteList: [ 'http://localhost:8000', 'http://localhost:8001' ],
   };
   // 跨域设置
   config.cors = {
