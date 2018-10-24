@@ -1,6 +1,9 @@
 import { Controller } from 'egg';
 
 export default class LoginController extends Controller {
+  /**
+   * 登陆
+   */
   public async login() {
     this.logger.info('登陆提交的参数', this.ctx.request.body);
     this.logger.info('session', this.ctx.session);
@@ -33,5 +36,15 @@ export default class LoginController extends Controller {
     }
 
     this.ctx.body = response;
+  }
+  /**
+   * 退出
+   */
+  public async logout() {
+    this.ctx.session = {};
+    this.ctx.body = {
+      status: 200,
+      msg: 'ok',
+    };
   }
 }
